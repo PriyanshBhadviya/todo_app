@@ -1,0 +1,40 @@
+~ curl -X GET "http://127.0.0.1:5000/api/tasks/sort?sort_by=priority"
+
+[
+  {
+    "created_at": "2024-05-19T07:27:43.377290",
+    "description": "This is a test task",
+    "due_date": "2023-12-31T23:59:59",
+    "id": 1,
+    "priority": "High",
+    "status": "Pending",
+    "title": "Task 1",
+    "updated_at": "2024-05-19T07:27:43.377301"
+  },
+  {
+    "created_at": "2024-05-19T07:30:01.825109",
+    "description": "This is a test task",
+    "due_date": "2023-12-31T23:59:59",
+    "id": 2,
+    "priority": "Low",
+    "status": "Pending",
+    "title": "Task 2",
+    "updated_at": "2024-05-19T07:30:01.825114"
+  },
+ ~ curl -X POST http://127.0.0.1:5000/api/tasks -H "Content-Type: application/json" -d '{
+"title": "Task 3",
+"description": "This is a test task 3",
+"due_date": "2023-12-31T23:59:59",
+"priority": "Medium"
+}'
+{
+  "created_at": "2024-05-19T07:46:53.323417",
+  "description": "This is a test task 3",
+  "due_date": "2023-12-31T23:59:59",
+  "id": 3,
+  "priority": "Medium",
+  "status": "Pending",
+  "title": "Task 3",
+  "updated_at": "2024-05-19T07:46:53.323422"
+}
+
